@@ -2,14 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 150px 0 15px 0;
+    padding: 20px;
     font-size: .8em;
     font-family: $ubuntu;
     font-weight: 300;
     
-    a{
-        text-decoration: none;
-        font-weight: 600;
-        color: #028da9;
+    p{
+        em{color: #f9f9f9};
+        
+        a{
+            text-decoration: none;
+            font-weight: 600;
+            color: #028da9;
+            cursor: pointer;
+        }
     }
 }

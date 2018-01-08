@@ -1,4 +1,8 @@
 #about{
+    opacity: 0;
+    transition-duration: .2s;
+    animation: fadein .6s forwards;
+    animation-delay: 2.5s;
     
     width: 100%;
     display: flex;
@@ -10,8 +14,14 @@
     p,span{ text-align: center; }
     
     p{ 
-        font-size: 1.4em;
+        font-size: 2.5em;
         font-weight: 700;
+        
+        em{
+            font-style: normal;
+            border-bottom: 3px solid #03AED0;
+            color: #03AED0;
+        }
     }
     
     span{
@@ -20,16 +30,25 @@
         margin: 20px 0 0 0;
     }
     
-    .box{
-        height: 15vw;
-        width: 15vw;
-        border-radius: 50%;
+    .objectives{
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 15%;
         
-        img{
-            width: 8vw;
+        .box{
+            height: 15vw;
+            width: 15vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            img{
+                width: 8vw;
+            }
+            
+            p{ font-size: 1.5em };
         }
     }
     
@@ -53,6 +72,50 @@
             @extend %btn;
             margin-top: 20px;
             font-size: 1.4em;
+        }
+    }
+    
+    .money{
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        
+        img:not(.floating){
+            height: 30vw;
+            transform: translateY(60px);
+        }
+        
+        .floating{
+            position: absolute;
+            z-index: -99;
+            transition-duration: .2s;
+            animation: bounce 3s infinite;  
+            animation-fill-mode: both;
+            width: 4vw;
+            
+            &:nth-child(2){
+                top: 14vh;
+                left: 38vw;
+            }
+            
+            &:nth-child(3){
+                top: 18vh;
+                left: 44vw;
+            }
+            
+            &:nth-child(4){
+                top: 13vh;
+                left: 57vw;
+            }
+            
+            &:nth-child(5){
+                
+                top: 26vh;
+                left: 55vw;
+            }
         }
     }
 }

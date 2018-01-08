@@ -12,7 +12,8 @@
     ];
     
     function syncMailchimp($data, $list) {
-        $apiKey = '_INSERT_';
+        $apiKey = '73f78f5bbe32cac54be50fe8b849316e-us17';
+        $code = 'ac7028878b';
         $listId = $list; // id da lista que deverá receber o email
     
         $memberId = md5(strtolower($data['email']));
@@ -46,17 +47,6 @@
         }else{
             echo "true";
         }
-    }
-    
-    switch ($user->type) {
-        
-        case 'wishlist':
-            $code = 'fb19ed9fc0';
-            break;
-        
-        default:
-            //...
-            break;
     }
     
     syncMailchimp($data, $code);

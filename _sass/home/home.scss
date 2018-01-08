@@ -6,6 +6,11 @@
         justify-content: space-between;
         align-items: center;
         
+        opacity: 0;
+        transition-duration: .2s;
+        animation: fadein .6s forwards;
+        animation-delay: 1s;
+        
         .logo{
             img{ height: 50px; }
         }
@@ -23,6 +28,11 @@
         align-items: center;
         
         .text{
+            opacity: 0;
+            transition-duration: .2s;
+            animation: fadein .6s forwards;
+            animation-delay: 1.5s;
+            
             margin-left: 5%;
             width: 65%;
             
@@ -41,7 +51,7 @@
                 width: 35vw;
                 white-space: pre-wrap;
                 display: block;
-                margin-top: 40px;
+                margin-top: 15px;
                 color: #333;
             }
             
@@ -59,10 +69,60 @@
         }
         
         .vector{
+            opacity: 0;
+            transition-duration: .2s;
+            animation: fadein .6s forwards;
+            animation-delay: 2s;
             
-            img{
-                width: 100%;
-                transform: translate(40px, 80px);
+            position: relative;
+            
+            img:not(.floating){
+                height: 60vw;
+            }
+            
+            .floating{
+                position: absolute;
+                z-index: -99;
+                transition-duration: .2s;
+                animation: bounce 3s infinite;  
+                animation-fill-mode: both;
+                
+                &:nth-child(2){
+                    bottom: 65vh;
+                    width: 100px;
+                    right: 50vw;
+                }
+                
+                &:nth-child(3){
+                    bottom: 80vh;
+                    width: 65px;
+                    right: 22vw;
+                }
+                
+                &:nth-child(4){
+                    width: 30px;
+                    bottom: 68vh;
+                    right: 42vw;
+                }
+                
+                &:nth-child(5){
+                    width: 80px;
+                    bottom: 57vh;
+                    right: 16vw;
+                }
+                
+                &:nth-child(6){
+                    width: 200px;
+                    bottom: 21vh;
+                    right: 15vw;
+                    z-index: 99;
+                }
+                
+                &:nth-child(7){
+                    width: 40px;
+                    bottom: 85vh;
+                    right: 30vw;
+                }
             }
         }
     }

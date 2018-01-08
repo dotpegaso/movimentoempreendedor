@@ -1,0 +1,58 @@
+#about{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    
+    article{ width: 100%; margin: 100px 0;}
+    p,span{ text-align: center; }
+    
+    p{ 
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+    
+    span{
+        color: #333;
+        display: block;
+        margin: 20px 0 0 0;
+    }
+    
+    .box{
+        height: 15vw;
+        width: 15vw;
+        border-radius: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        img{
+            width: 8vw;
+        }
+    }
+    
+    form{
+        width: 30vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        input{
+            width: 100%;
+            margin: 15px 0;
+            font-size: 1.2em;
+            border: none;
+            border-bottom: 3px solid #BBB;
+            padding: 10px 5px;
+            background: transparent;
+        }
+        
+        button{
+            @extend %btn;
+            margin-top: 20px;
+            font-size: 1.4em;
+        }
+    }
+}

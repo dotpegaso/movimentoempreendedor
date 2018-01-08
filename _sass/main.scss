@@ -1,0 +1,45 @@
+$ubuntu: 'Ubuntu', sans-serif;
+
+*{
+    margin: 0; 
+    outline: none;
+    font-family: $ubuntu;
+
+    ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+    ::-webkit-scrollbar-track {
+        background: rgb(240, 240, 240);
+    }     
+    ::-webkit-scrollbar-thumb {
+        background: #555; 
+    }
+    
+}
+
+
+body{
+    cursor: default;
+    overflow-x: hidden;
+    background: #f8f8f8;
+}
+
+%btn{
+    border: none;
+    background: #03AED0;
+    color: #FFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition-duration: .2s;
+    font-weight: 300;
+    
+    &:hover{
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+}
+
+@import 'home/home.scss';
+@import 'home/about.scss';
+@import 'home/footer.scss';

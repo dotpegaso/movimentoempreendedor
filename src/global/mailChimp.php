@@ -13,7 +13,6 @@
     
     function syncMailchimp($data, $list) {
         $apiKey = '73f78f5bbe32cac54be50fe8b849316e-us17';
-        $code = 'ac7028878b';
         $listId = $list; // id da lista que deverá receber o email
     
         $memberId = md5(strtolower($data['email']));
@@ -49,5 +48,6 @@
         }
     }
     
+    $code = 'ac7028878b';
     syncMailchimp($data, $code);
 ?>

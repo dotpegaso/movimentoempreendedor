@@ -75,6 +75,15 @@
         }
     }
     
+    .success, .error{
+        width: 100%;
+        font-size: .6em;
+        margin-top: 15px;
+    }
+    
+    .success{ color: #56b562; }
+    .error{ color: red; }
+    
     .money{
         width: 100%;
         display: flex;

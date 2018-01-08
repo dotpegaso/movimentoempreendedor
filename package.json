@@ -32,5 +32,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-wait": "0.0.2",
     "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "angular-instagram-api-factory": "^0.5.0"
   }
 }

@@ -45,6 +45,10 @@
             <p>Aumente suas <br> vendas</p>
         </div>
         </div>
+        
+    <div id="instafeed" ></div>
+    
+    
     <article>
         <p>Deixe seu <em>contato</em> abaixo e participe</p>
         <span>Você não precisa ser um mega hiper ultra empreendedor para participar <br> das nossas reuniões, basta ter vontade de empreender!</span>
@@ -55,8 +59,16 @@
         <input ng-model="mailChimp.email" type="email" placeholder="seu email" required>
         <input ng-model="mailChimp.empresa" type="text" placeholder="nome do seu negócio/empresa" required>
         <input ng-model="mailChimp.segmento" type="text" placeholder="segmento" required>
-        <button>Quero participar!</button>
+        <button ng-show="!success && !error">Quero participar!</button>
     </form>
+    
+    <div class="success" ng-if="success">
+        <p>Obrigado, {{ mailChimp.nome }}! <br> Sua inscrição foi realizada. <br> Aguarde nosso contato por email.</p>
+    </div>
+    
+    <div class="error" ng-if="error">
+        <p>Algo deu errado!<br> Por favor, atualize a página e tente novamente.</p>
+    </div>
     
     <div class="money">
         <img src="/res/woman.png"></img>

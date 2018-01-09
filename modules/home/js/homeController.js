@@ -1,6 +1,6 @@
 angular.module('home', [])
 
-.controller('homeController', function($scope, $http){
+.controller('homeController', function($scope, $http, $location, $anchorScroll){
   
   function fnSuccess (res) {
      res.data ? $scope.success = true : $scope.error = true;
@@ -11,6 +11,14 @@ angular.module('home', [])
       return fnSuccess(success);
     });
   }
+  
+  $scope.scroll = function() {
+   var id = $location.hash();
+    $location.hash('add');
+    $anchorScroll();
+    $location.hash(id);
+
+ };
   
     
 })
